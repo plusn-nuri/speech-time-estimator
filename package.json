@@ -1,0 +1,63 @@
+{
+    "name": "speech-time-estimator",
+    "displayName": "Speech Time Estimator",
+    "description": "Estimates how many minutes it would take to deliver a spoken  script",
+    "version": "0.0.1",
+    "publisher": "nurih",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.speechTimeEstimator"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.speechTimeEstimator",
+                "title": "Speech Time Estimator"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Speech Time Estimator Configuration",
+            "properties": {
+                "speechTimer.wpm.slow": {
+                    "description": "\"Slow\" words per minutes delivery rate",
+                    "type": "integer",
+                    "default": 100
+                },
+                "speechTimer.wpm.medium": {
+                    "description": "\"Medium\" words per minutes delivery rate",
+                    "type": "integer",
+                    "default": 135
+                },
+                "speechTimer.wpm.fast": {
+                    "description": "\"Fast\" words per minutes delivery rate",
+                    "type": "integer",
+                    "default": 170
+                }
+            }
+        },
+        "keybindings": [
+            {
+                "command": "extension.speechTimeEstimator",
+                "key": "Ctrl+Alt+S Ctrl+Alt+T"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
