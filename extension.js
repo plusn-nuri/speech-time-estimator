@@ -3,6 +3,7 @@ const {
     commands,
     workspace
 } = require('vscode');
+
 const {
     countWords,
     getTimingStrings,
@@ -51,7 +52,6 @@ function speechTimeEstimator() {
 };
 
 
-// this method is called when your extension is deactivated
 function deactivate() {}
 
 exports.deactivate = deactivate;

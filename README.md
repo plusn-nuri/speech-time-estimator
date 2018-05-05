@@ -50,6 +50,6 @@ This extension considers these potential words an acceptable inaccuracy for the 
 
 ## Release Notes
 
-### 1.0.0
+### 0.9.0
 
-Initial release of Speech Timer
+Initial release
