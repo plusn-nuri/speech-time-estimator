@@ -50,6 +50,10 @@ This extension considers these potential words an acceptable inaccuracy for the 
 
 ## Release Notes
 
+### 0.9.1
+
+- Package dependency update by npm audit.
+
 ### 0.9.0
 
-Initial release
+- Initial release

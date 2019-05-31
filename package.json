@@ -2,7 +2,7 @@
     "name": "speech-time-estimator",
     "displayName": "Speech Time Estimator (Preview)",
     "description": "Estimates how many minutes it would take to deliver a spoken  script",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "publisher": "PlusN",
     "homepage": "https://github.com/plusn-nuri/speech-time-estimator",
     "repository": {
@@ -21,10 +21,12 @@
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.speechTimeEstimator",
-            "title": "Speech Time Estimator"
-        }],
+        "commands": [
+            {
+                "command": "extension.speechTimeEstimator",
+                "title": "Speech Time Estimator"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "Speech Time Estimator Configuration",
@@ -46,20 +48,22 @@
                 }
             }
         },
-        "keybindings": [{
-            "command": "extension.speechTimeEstimator",
-            "key": "Ctrl+Alt+S Ctrl+Alt+T"
-        }]
+        "keybindings": [
+            {
+                "command": "extension.speechTimeEstimator",
+                "key": "Ctrl+Alt+S Ctrl+Alt+T"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "eslint": "^4.11.0",
+        "@types/mocha": "^2.2.42",
         "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "eslint": "^5.16.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.34"
     }
 }
